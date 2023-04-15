@@ -1,0 +1,27 @@
+<div class="border d-flex justify-content-between">
+  <a href="<%= Rho::Application.startURI %>" class="m-1 btn btn-secondary btn-sm">Home</a>
+  <a href="<%= url_for :action => :generate_100 %>" class="m-1 btn btn-primary btn-sm">Generate 100 records </a>
+
+  <h3>TestModels</h3>
+
+  <a href="<%= url_for :action => :new %>" class="m-1 btn btn-primary btn-sm">New</a>
+
+</div>
+
+<div class="container-fluid p-1">
+
+  <div class="list-group">
+    <% @testmodels.each do |testmodel| %>
+
+      <a
+        href="<%= url_for :action => :show, :id => testmodel.object %>"
+        class="list-group-item list-group-item-action d-flex justify-content-between">
+        <%= testmodel.data1 %>
+        <i data-feather="chevron-right"></i>
+      </a>
+
+    <% end %>
+
+  </div>
+
+</div>

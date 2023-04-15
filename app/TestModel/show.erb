@@ -1,0 +1,44 @@
+<div class="border d-flex justify-content-between">
+  <a href="<%= url_for :action => :index %>" class="m-1 btn btn-secondary btn-sm">Back</a>
+
+  <h3><%= @testmodel.data1 %></h3>
+
+  <a href="<%= url_for :action => :edit, :id => @testmodel.object %>" class="m-1 btn btn-primary btn-sm">Edit</a>
+
+</div>
+
+<div class="container-fluid p-1">
+
+  <ul class="list-group">
+    
+      <li class="list-group-item">
+        <div class="row">
+          <div class="col-6">
+            <span><strong>Data1</strong></span>
+          </div>
+          <div class="col-6"><%= @testmodel.data1 %></div>
+        </div>
+      </li>
+    
+      <li class="list-group-item">
+        <div class="row">
+          <div class="col-6">
+            <span><strong>Data2</strong></span>
+          </div>
+          <div class="col-6"><%= @testmodel.data2 %></div>
+        </div>
+      </li>
+    
+      <li class="list-group-item">
+        <div class="row">
+          <div class="col-6">
+            <span><strong>Data3</strong></span>
+          </div>
+          <div class="col-6"><%= @testmodel.data3 %></div>
+        </div>
+      </li>
+    
+  </ul>
+
+
+</div>

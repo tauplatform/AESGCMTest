@@ -1,0 +1,35 @@
+
+<div class="border d-flex justify-content-between">
+  <a href="<%= url_for :action => :show, :id => @testmodel.object %>" class="m-1 btn btn-secondary btn-sm">Cancel</a>
+
+  <h3>Edit <%= @testmodel.data1 %></h3>
+
+  <a href="<%= url_for :action => :delete, :id => @testmodel.object %>" class="m-1 btn btn-danger btn-sm">Delete</a>
+
+</div>
+
+<div class="container-fluid">
+
+  <form method="POST" action="<%= url_for :action => :update %>">
+    <input type="hidden" name="id" value="<%= @testmodel.object %>"/>
+
+    
+        <div class="form-group">
+          <label for="testmodel[data1]">Data1</label>
+          <input type="text" id="testmodel[data1]" name="testmodel[data1]" value="<%= @testmodel.data1 %>" <%= placeholder( "Data1" ) %> class="form-control" />
+        </div>
+    
+        <div class="form-group">
+          <label for="testmodel[data2]">Data2</label>
+          <input type="text" id="testmodel[data2]" name="testmodel[data2]" value="<%= @testmodel.data2 %>" <%= placeholder( "Data2" ) %> class="form-control" />
+        </div>
+    
+        <div class="form-group">
+          <label for="testmodel[data3]">Data3</label>
+          <input type="text" id="testmodel[data3]" name="testmodel[data3]" value="<%= @testmodel.data3 %>" <%= placeholder( "Data3" ) %> class="form-control" />
+        </div>
+    
+    <button type="submit" class="btn btn-success btn-block">Update</button>
+  </form>
+
+</div>
