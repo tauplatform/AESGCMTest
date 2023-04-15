@@ -1,6 +1,6 @@
 ## Note: sdk is full path to Rhodes root. If not defined - automatically find latest installed Rhodes gem
 #sdk: "/Users/MOHUS/.rvm/gems/ruby-2.7.0@75/gems/rhodes-7.5.3"
-sdk: "/Users/MOHUS/tauplatform/rhodes"
+#sdk: "/Users/MOHUS/tauplatform/rhodes"
 sdkversion: 7.4.0
 name: AESGCMTest
 version: 1.0
